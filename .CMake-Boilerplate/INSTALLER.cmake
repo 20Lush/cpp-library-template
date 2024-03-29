@@ -6,21 +6,22 @@ function(GenerateMetaData PROJECT_NAME)
         )
     
     configure_file("${CMAKE_CURRENT_FUNCTION_LIST_DIR}/project-config.cmake"
-        ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}"/cmake/"${PROJECT_NAME}"-config-version.cmake"
+        "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/cmake/${PROJECT_NAME}-config-version.cmake"
         @ONLY
     )
 
     include(CMakePackageConfigHelpers)
     write_basic_package_version_file(
-        ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}"/cmake/"${PROJECT_NAME}"-config-version.cmake"
+        "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/cmake/${PROJECT_NAME}-config-version.cmake"
+        COMPATIBILITY AnyNewerVersion
     )
 
     install(
         FILES
-            ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}"/cmake/"${PROJECT_NAME}"-config.cmake"
-            ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}"/cmake/"${PROJECT_NAME}"-config-version.cmake"
+            "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/cmake/${PROJECT_NAME}-config.cmake"
+            "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/cmake/${PROJECT_NAME}-config-version.cmake"
         DESTINATION
-            "share/cmake/"${PROJECT_NAME}
+            "share/cmake/${PROJECT_NAME}"
     )
 
 endfunction(GenerateMetaData)
@@ -41,7 +42,7 @@ function(DefaultInstall PROJECT_NAME)
 
     InstallSetup(${PROJECT_NAME})
 
-    install(TARGETS ${PROJECT_NAME} EXPORT ${PROJECT_NAME}-target_sources
+    install(TARGETS ${PROJECT_NAME} EXPORT ${PROJECT_NAME}-targets
         RUNTIME DESTINATION bin
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib

@@ -24,7 +24,7 @@ include_directories("${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_INCLUDEDIR}")
 # In the unlikely scenario this executable is used in another project,
 # they'll need the public headers.
 target_include_directories(${PROJECT_NAME}
-    PUBLIC_HEADER
+    PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>
 )
