@@ -13,6 +13,7 @@ INSTALL_DIRECTORY="${BUILD_DIRECTORY}/install"
 # Build with unit tests
 TESTING=false
 
+# Handle command line arguments
 while getopts 'b:t:h' opt; do
     case "$opt" in
         b)
