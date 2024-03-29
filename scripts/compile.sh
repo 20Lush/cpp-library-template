@@ -33,10 +33,10 @@ done
 
 shift "$(($OPTIND -1))"
 
-echo "====== BUILD DIALOGUE ===================================================================="
-echo "      !!! Building in $BUILD_DIRECTORY !!!                                                "
-echo "      !!! Configured for $BUILD_TYPE   !!!                                                "
-echo "=========================================================================================="
+echo "====== BUILD DIALOGUE ====================================================================================="
+echo "      !!! Building in $BUILD_DIRECTORY !!!                                                                 "
+echo "      !!! Configured for $BUILD_TYPE   !!!                                                                 "
+echo "==========================================================================================================="
 
 mkdir -p ${BUILD_DIRECTORY}
 cd ${BUILD_DIRECTORY}
