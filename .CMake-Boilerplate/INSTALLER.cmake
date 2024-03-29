@@ -6,7 +6,7 @@ function(GenerateMetaData PROJECT_NAME)
         )
     
     configure_file("${CMAKE_CURRENT_FUNCTION_LIST_DIR}/project-config.cmake"
-        "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/cmake/${PROJECT_NAME}-config-version.cmake"
+        "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/cmake/${PROJECT_NAME}-config.cmake"
         @ONLY
     )
 
@@ -41,7 +41,6 @@ endfunction(InstallSetup)
 function(DefaultInstall PROJECT_NAME)
 
     InstallSetup(${PROJECT_NAME})
-
     install(TARGETS ${PROJECT_NAME} EXPORT ${PROJECT_NAME}-targets
         RUNTIME DESTINATION bin
         LIBRARY DESTINATION lib
@@ -49,5 +48,7 @@ function(DefaultInstall PROJECT_NAME)
         INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
         PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
     )
+
+    
 
 endfunction(DefaultInstall)
