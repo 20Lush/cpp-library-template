@@ -25,7 +25,6 @@ while getopts 'b:t:h' opt; do
         h)
             echo "====== HELP DIALOGUE ===================================================================="
             echo "  Usage: $(basename $0) [-h help] [-b built type(DEBUG or RELEASE)] [-t enable testing]  "
-            echo "String option should go before the flag it applies to. i.e. >>> ./compile.sh DEBUG -b <<<"
             echo "========================================================================================="
             exit 1
             ;;
