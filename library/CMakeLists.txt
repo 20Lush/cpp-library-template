@@ -17,9 +17,10 @@ set(PUBLIC_INCLUDE_FILES
     include/main.hpp
 )
 
-# Do a CMake add_library to mark it for build
+# Do a CMake add_library to mark it for build. change STATIC to SHARED or whatever when needed.
 add_library( ${PROJECT_NAME}
-    ${SOURCE_FILES}
+    STATIC
+        ${SOURCE_FILES}
 )
 
 # There might be some includes we want at build-time here
