@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.22)
 
-# Lets initialize the project for our actual executable
-project(EXECUTABLE_NAME
+# Lets initialize the project for our actual library
+project(LIBRARY_NAME
     VERSION ${PROJECT_VERSION}
-    DESCRIPTION "EXECUTABLE Project"
+    DESCRIPTION "LIBRARY Project"
 )
 message(STATUS "Project name: " ${PROJECT_NAME})
 
@@ -17,8 +17,8 @@ set(PUBLIC_INCLUDE_FILES
     include/main.hpp
 )
 
-# Do a CMake add_executable to mark it for build
-add_executable( ${PROJECT_NAME}
+# Do a CMake add_library to mark it for build
+add_library( ${PROJECT_NAME}
     ${SOURCE_FILES}
 )
 
@@ -26,7 +26,7 @@ add_executable( ${PROJECT_NAME}
 include_directories("${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_INCLUDEDIR}")
 
 # The installed directory is going to have its own include directory.
-# In the unlikely scenario this executable is used in another project,
+# In the unlikely scenario this library is used in another project,
 # they'll need the public headers.
 target_include_directories(${PROJECT_NAME}
     PUBLIC
@@ -54,6 +54,6 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 # Send to boilerplate!
-message(STATUS "Installing executable to " ${CMAKE_INSTALL_PREFIX} "/...")
+message(STATUS "Installing library to " ${CMAKE_INSTALL_PREFIX} "/...")
 # Found in INSTALLER.cmake
 DefaultInstall(${PROJECT_NAME})

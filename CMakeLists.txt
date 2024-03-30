@@ -4,9 +4,9 @@ cmake_minimum_required(VERSION 3.22)
 set(PROJECT_VERSION 1.0.0)
 
 # Initialize our project regarding the whole repo, and give it its version.
-project(EXECUTABLE_REPOSITORY_NAME
+project(LIBRARY_REPOSITORY_NAME
     VERSION ${PROJECT_VERSION}
-    DESCRIPTION "EXECUTABLE Repository"
+    DESCRIPTION "LIBRARY Repository"
 )
 message(STATUS "Repository name: " ${PROJECT_NAME})
 
@@ -40,4 +40,4 @@ endif()
 set(PACKAGE_HINTS ${CMAKE_INSTALL_PREFIX})
 
 # Add our subdirectories we want to build and install
-add_subdirectory(executable)
+add_subdirectory(library)
