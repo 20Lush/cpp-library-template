@@ -33,6 +33,12 @@ if $VERIFY_MODE; then
     exit 0
 fi
 
+echo "[INFO] Formatting code! This could take a while..."
 
 find ./ -iname *.hpp -o -iname *.cpp  -o -iname *.h | xargs clang-format -style=file:./.clang-format -i
+
+echo "[INFO] ...Done!"
+
 rm ./.clang-format
+
+echo "[INFO] Cleaning up. Bye bye."
