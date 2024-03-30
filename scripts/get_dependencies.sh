@@ -2,7 +2,7 @@
 # You should only be using release artifacts as dependency, we shouldn't be compiling other people's code../
 # If the archive is not xz... well we might have to deal with that later.
 declare -a dependency_links=(
-    "https://github.com/20Lush/DevOps/releases/download/v0.0.0/clang-format.tar.xz"
+    https://github.com/20Lush/DevOps/releases/download/v0.0.1/clang-format.tar.xz
 )
 
 # Make the dependencies directory if it doesn't exist...
