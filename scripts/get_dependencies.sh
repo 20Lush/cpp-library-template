@@ -1,8 +1,10 @@
 # Put links to any project dependencies you need in here.
 # You should only be using release artifacts as dependency, we shouldn't be compiling other people's code../
 # If the archive is not xz... well we might have to deal with that later.
+# 
+# Do .../releases/latest/download/<file>.tar.xz to always get the latest artifact without have to manually update the string here
 declare -a dependency_links=(
-    https://github.com/20Lush/DevOps/releases/download/v0.0.1/clang-format.tar.xz
+    "https://github.com/20Lush/DevOps/releases/latest/download/clang-format.tar.xz"
 )
 
 # Make the dependencies directory if it doesn't exist...
