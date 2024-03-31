@@ -2,7 +2,7 @@ VERIFY_MODE=false
 
 # Lets see if the dependency folder exists with the format rules file before starting.
 if ! test -f ./../.Dependencies/.clang-format; then
-  echo "[ERROR} .clang-format not found!! have you ran get_dependencies.sh yet?"
+  echo "[ERROR] .clang-format not found!! have you ran get_dependencies.sh yet?"
   exit 1
 fi
 

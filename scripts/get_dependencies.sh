@@ -9,7 +9,7 @@ declare -a dependency_links=(
 
 # Make the dependencies directory if it doesn't exist...
 if [ ! -d ./../.Dependencies ]; then
-  echo "Creating dependencies directory..."
+  echo "[INFO] Creating dependencies directory..."
   mkdir ./../.Dependencies
 fi
 
