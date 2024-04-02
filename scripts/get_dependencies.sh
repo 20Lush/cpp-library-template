@@ -1,3 +1,5 @@
+#!/bin/bash -e
+
 # Put links to any project dependencies you need in here.
 # You should only be using release artifacts as dependency, we shouldn't be compiling other people's code../
 # If the archive is not xz... well we might have to deal with that later.

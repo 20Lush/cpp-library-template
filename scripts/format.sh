@@ -1,3 +1,5 @@
+#!/bin/bash -e
+
 VERIFY_MODE=false
 
 # Lets see if the dependency folder exists with the format rules file before starting.
