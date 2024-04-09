@@ -17,6 +17,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/runtime")
 set(CMAKE_BOILERPLATE_PATH ${CMAKE_SOURCE_DIR}/.CMake-Boilerplate)
 include(${CMAKE_BOILERPLATE_PATH}/INSTALLER.cmake)
 include(${CMAKE_BOILERPLATE_PATH}/VARIABLES.cmake)
+include(${CMAKE_BOILERPLATE_PATH}/TESTING.cmake)
 
 # We declare where wwe wwant our cmake module stuff to live at build-time
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_LIST_DIR}/cmake/")

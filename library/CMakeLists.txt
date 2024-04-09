@@ -58,3 +58,5 @@ target_link_libraries(${PROJECT_NAME}
 message(STATUS "Installing library to " ${CMAKE_INSTALL_PREFIX} "/...")
 # Found in INSTALLER.cmake
 DefaultInstall(${PROJECT_NAME})
+
+AddUnitTestsDirectory(test)

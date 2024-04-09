@@ -14,7 +14,7 @@ INSTALL_DIRECTORY="${BUILD_DIRECTORY}/install"
 TESTING=false
 
 # Handle command line arguments
-while getopts 'b:t:h' opt; do
+while getopts 'b:th' opt; do
     case "$opt" in
         b)
             BUILD_TYPE="$OPTARG"
@@ -48,5 +48,5 @@ cd ${BUILD_DIRECTORY}
 
 # cmake command line calls that define some build/install environment variables like install directory and if we want unit testing
 cmake -DCMAKE_BOILERPLATE_PATH=${CMAKE_BOILERPLATES} -DCMAKE_INSTALL_PREFIX=${INSTALL_DIRECTORY} -DENABLE_TESTING=${TESTING} -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..
-cmake --build .
+cmake --build . -j 8
 cmake --install .
