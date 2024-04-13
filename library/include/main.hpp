@@ -6,7 +6,9 @@ namespace lush::LIBRARY {
 
 	class Printer {
 
-		void print_args(int argc, char** argv);
+		public:
+			bool print_args(int argc, char** argv);
+
 	};
 
 }  // namespace lush::LIBRARY
